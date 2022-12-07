@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('facturas', function (Blueprint $table) {
             $table->id();
             $table->integer('total');
-            $table->foreignId('cliente_id')->constrained()->onDelete('cascade');
+            $table->integer('cliente_documento')->unsigned();
+            $table->foreign('cliente_documento')->references('documento')->on('clientes');
             $table->timestamps();
         });
     }

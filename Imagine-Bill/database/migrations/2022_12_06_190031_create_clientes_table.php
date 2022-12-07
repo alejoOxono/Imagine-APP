@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('clientes', function (Blueprint $table) {
-            $table->id();
+            $table->integer('documento');
+            $table->primary('documento');
             $table->string('nombre', 100);
             $table->string('apellido', 100);
-            $table->integer('documento');
             $table->timestamps();
         });
     }

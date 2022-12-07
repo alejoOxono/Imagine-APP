@@ -11,12 +11,12 @@ class FacturasController extends Controller
     {
         $instance_factura = new Facturas;
         $instance_factura->total = $request->input('total');
-        $instance_factura->cliente_id = $request->input('cliente_id');
+        $instance_factura->cliente_documento = $request->input('cliente_documento');
         $instance_factura->save();
     }
 
     public function show($id)
     {
-        return Facturas::findOrFail($id)->get();
+        return Facturas::findOrFail($id);
     }
 }
