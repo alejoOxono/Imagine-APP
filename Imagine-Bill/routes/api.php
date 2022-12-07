@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\FacturasController;
+use App\Http\Controllers\ProductosController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::resource('Clientes', ClientesController::class);
+Route::resource('Facturas', FacturasController::class);
+Route::resource('Productos', ProductosController::class);
