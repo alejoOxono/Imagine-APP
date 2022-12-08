@@ -1,0 +1,7 @@
+.content-landpage {
+	display: flex;
+	flex-direction: column;
+	padding: 56px 0px 16px 80px;
+  width: 100%;
+  box-sizing: border-box;
+}

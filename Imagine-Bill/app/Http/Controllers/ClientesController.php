@@ -29,9 +29,20 @@ class ClientesController extends Controller
         return Clientes::findOrFail($id);
     }
 
+    public function update(Request $request, $id)
+    {
+        $search_cliente = clientes::find($id);
+        $search_cliente->delete();
+        $instance_cliente = new Clientes;
+        $instance_cliente->documento = $request->input('documento');
+        $instance_cliente->nombre = $request->input('nombre');
+        $instance_cliente->apellido = $request->input('apellido');
+        $instance_cliente->save();
+    }
+
     public function destroy($id)
     {
-        $search_cliente = Cliente::findOrFail($id);
+        $search_cliente = Clientes::find($id);
         $search_cliente->delete();
     }
 }

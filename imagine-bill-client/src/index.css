@@ -1,13 +1,356 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  color: inherit;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  width: 320px;
+  border: 0.2px solid #eaedf3;
+  border-radius: 20px;
+  background: white;
+  padding: 16px 4px 8px 4px;
+  overflow: hidden;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 145%;
+  /* or 46px */
+  letter-spacing: -0.01em;
+}
+
+label {
+  display: inline-block;
+  width: 240px;
+}
+
+table {
+  width:100%;
+  margin:24px 0 0 0;
+}
+
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+
+
+.heading1-bold {
+  /* Heading 1/Bold */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 130%;
+  /* or 49px */
+  letter-spacing: -0.02em;
+}
+
+.heading1-regular {
+  /* Heading 1/Regular */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 130%;
+  /* or 49px */
+  letter-spacing: -0.02em;
+}
+
+.heading2-bold {
+  /* Heading 2/Bold */
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 145%;
+  /* or 46px */
+  letter-spacing: -0.01em;
+}
+
+.heading2-regular {
+  /* Heading 2/Regular */
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 145%;
+  /* or 46px */
+  letter-spacing: -0.01em;
+}
+
+.body-bold {
+  /* Body/Bold */
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 175%;
+  /* identical to box height, or 28px */
+}
+
+.body-regular {
+  /* Body/Regular */
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+}
+
+.grises-1000 {
+  color: #0B0C0E;
+}
+
+.primary-color-background-900 {
+  background-color: #002E4D;
+}
+
+.primary-color-background-800 {
+  background-color: #004D80;
+}
+
+.primary-color-background-700 {
+  background-color: #006BB3;
+}
+
+.primary-color-background-200 {
+  background-color: #B3E0FF;
+}
+
+.primary-color-background-100 {
+  background-color: #E5F5FF;
+}
+
+.secundary-color-background-500 {
+  background-color: #FF751A;
+}
+
+.secundary-color-background-400 {
+  background-color: #FF944D;
+}
+
+.secundary-color-background-200 {
+  background-color: #FFD1B3;
+}
+
+.secundary-color-background-100 {
+  background-color: #FFF0E5;
+}
+
+.primary-color-text-900 {
+  color: #002E4D;
+}
+
+.primary-color-text-800 {
+  color: #004D80;
+}
+
+.primary-color-text-700 {
+  color: #006BB3;
+}
+
+.primary-color-text-200 {
+  color: #B3E0FF;
+}
+
+.primary-color-text-100 {
+  color: #E5F5FF;
+}
+
+.secundary-color-text-500 {
+  color: #FF751A;
+}
+
+.secundary-color-text-400 {
+  color: #FF944D;
+}
+
+.secundary-color-text-200 {
+  color: #FFD1B3;
+}
+
+.secundary-color-text-100 {
+  color: #FFF0E5;
+}
+
+.button1 {
+  box-sizing: border-box;
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  width: 160px;
+  height: 58px;
+  /* Secundary/500 */
+  background: #FF751A;
+  /* Primary/1000 */
+  border: 1px solid #000F1A;
+  border-radius: 100px;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 130%;
+  /* or 49px */
+  letter-spacing: -0.02em;
+  /* Primary/100 */
+  color: #E5F5FF;
+  /* Primary/1000 */
+  border: 1px solid #000F1A;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  cursor: pointer;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 130%;
+  color: #E5F5FF;
+}
+
+.button1:hover {
+  /* Property 1=Variant2 */
+  box-sizing: border-box;
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  width: 160px;
+  height: 58px;
+  /* Primary/700 */
+  background: #006BB3;
+  /* Secundary/1000 */
+  border: 1px solid #1A0A00;
+  border-radius: 100px;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 130%;
+  /* or 49px */
+  letter-spacing: -0.02em;
+  /* Secundary/100 */
+  color: #FFF0E5;
+  /* Secundary/1000 */
+  border: 1px solid #1A0A00;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  /* Heading 1/Bold */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 130%;
+  /* or 49px */
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  /* Secundary/100 */
+  color: #FFF0E5;
+}
+
+.button2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 73px;
+  /* Primary/200 */
+  background: #B3E0FF;
+  /* Secundary/900 */
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 145%;
+  /* or 46px */
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #4D1F00;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.button2:hover,
+.button2-clicked {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  /* Primary/800 */
+  background: #004D80;
+  /* Secundary/300 */
+  border-bottom: 1px solid #FFB280;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 145%;
+  /* or 46px */
+  text-align: center;
+  letter-spacing: -0.01em;
+  /* Secundary/300 */
+  color: #FFB280;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.content-all {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.content-dashboard {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 84%;
+  min-height: 100%;
+  /* Grises/100 */
+  background: #F1F2F4;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 1;
 }
