@@ -3,7 +3,7 @@ import './formproductos.css'
 
 export default function FormProductos({ handleForm, handleSubmit, data }) {
   return (
-    <form className='form-modify-container' onChange={(e) => handleForm(e)}>
+    <form onChange={(e) => handleForm(e)}>
 
       <div className="heading2-regular grises-1000 div-form-productos">
         <label htmlFor="nombre">Nombre: </label>

@@ -20,7 +20,7 @@ export default function ReadProductos({ insertRecord }) {
 
   return (
     <div style={{ display: "flex", alignContent: "center", width: "100%" }}>
-      <TableProductos data={data} handleDelete={handleDelete}/>
+      <TableProductos data={data} handleDelete={handleDelete} />
     </div>
   )
 }

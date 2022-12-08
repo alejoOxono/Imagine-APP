@@ -11,20 +11,20 @@ export default function Clientes() {
   const handleSubmit = (e) => {
     e.preventDefault();
     insertRecord(record, 'Clientes');
-    if(!record?.nombre || !record?.documento || !record?.apellido){
-        alert('Por favor ingrese todos los datos');
+    if (!record?.nombre || !record?.documento || !record?.apellido) {
+      alert('Por favor ingrese todos los datos');
     } else {
-        alert('Se ha Ingresado un cliente nuevo');
-        window.location.reload();
+      alert('Se ha Ingresado un cliente nuevo');
+      window.location.reload();
     }
-}
+  }
 
-const handleForm = (e) => {
+  const handleForm = (e) => {
     setRecord({
-        ...record,
-        [e.target.name]: e.target.value
+      ...record,
+      [e.target.name]: e.target.value
     });
-}
+  }
 
   return (
     <div className='content-dashboard'>

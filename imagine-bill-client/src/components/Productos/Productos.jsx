@@ -11,20 +11,20 @@ export default function Productos() {
   const handleSubmit = (e) => {
     e.preventDefault();
     insertRecord(record, 'Productos');
-    if(!record?.nombre || !record?.precio){
-        alert('Por favor ingrese todos los datos');
+    if (!record?.nombre || !record?.precio) {
+      alert('Por favor ingrese todos los datos');
     } else {
-        alert('Se ha Ingresado un producto nuevo');
-        window.location.reload();
+      alert('Se ha Ingresado un producto nuevo');
+      window.location.reload();
     }
-}
+  }
 
-const handleForm = (e) => {
+  const handleForm = (e) => {
     setRecord({
-        ...record,
-        [e.target.name]: e.target.value
+      ...record,
+      [e.target.name]: e.target.value
     });
-}
+  }
 
   return (
     <div className='content-dashboard'>

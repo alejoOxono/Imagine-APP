@@ -3,7 +3,7 @@ import './formclientes.css'
 
 export default function FormClientes({ handleForm, handleSubmit, data }) {
   return (
-    <form className='form-modify-container' onChange={(e) => handleForm(e)}>
+    <form onChange={(e) => handleForm(e)}>
 
       <div className="heading2-regular grises-1000 div-form-clientes">
         <label htmlFor="nombre">Nombre: </label>
