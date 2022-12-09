@@ -13,6 +13,7 @@ export default function TableProductos({ data, handleDelete }) {
               <tr>
                 <th className='heading2-regular'>Nombre</th>
                 <th className='heading2-regular'>Precio</th>
+                <th className='heading2-regular'>IVA</th>
                 <th className='heading2-regular'>Actualizar</th>
                 <th className='heading2-regular'>Borrar</th>
               </tr>
@@ -24,14 +25,14 @@ export default function TableProductos({ data, handleDelete }) {
                     <tr>
                       <td className='body-regular'>{el.nombre}</td>
                       <td className='body-regular'>{el.precio} $</td>
+                      <td className='body-regular'>{el.iva} %</td>
                       <td>
                         <Link to={`/actualizar/producto/${el.id}`} state={el}>
                           <img src={editar} style={{ width: "32px", height: "32px" }} alt="editar" />
                         </Link>
                       </td>
                       <td>
-                        <button onClick={(e) => handleDelete(e, el.id)}
-                          style={{ border: "0", backgroundColor: "fff0e500", cursor: "pointer" }}>
+                        <button onClick={(e) => handleDelete(e, el.id)}>
                           <img src={borrar} style={{ width: "32px", height: "32px" }} alt="borrar" />
                         </button>
                       </td>

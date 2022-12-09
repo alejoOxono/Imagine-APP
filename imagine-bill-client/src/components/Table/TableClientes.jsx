@@ -32,8 +32,7 @@ export default function TableClientes({ data, handleDelete }) {
                         </Link>
                       </td>
                       <td>
-                        <button onClick={(e) => handleDelete(e, el.documento)}
-                          style={{ border: "0", backgroundColor: "fff0e500", cursor: "pointer" }}>
+                        <button onClick={(e) => handleDelete(e, el.documento)}>
                           <img src={borrar} style={{ width: "32px", height: "32px" }} alt="borrar" />
                         </button>
                       </td>

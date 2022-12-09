@@ -1,0 +1,14 @@
+.content-search-producto {
+    display: flex;
+}
+
+.div-search-producto {
+    display: flex;
+    flex-direction: row;
+    padding: 24px 0;
+    width: 100%;
+}
+
+.content-table-products {
+    width: 100%;
+}

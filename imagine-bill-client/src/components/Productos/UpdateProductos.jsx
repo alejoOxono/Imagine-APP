@@ -11,7 +11,8 @@ export default function UpdateProductos() {
   const [record, setRecord] = useState({
     id: data.id,
     nombre: data.nombre,
-    precio: data.precio
+    precio: data.precio,
+    iva: data.iva
   })
 
   const handleSubmit = (e) => {
@@ -37,7 +38,11 @@ export default function UpdateProductos() {
       <InfoBar data={'Ingrese los nuevos datos para el producto actual'} />
       <div className='content-landpage'>
         <h1 className='heading1-bold grises-1000'>Actualizar Datos De Un Producto</h1>
-        <FormProductos handleForm={handleForm} handleSubmit={handleSubmit} data={data} />
+        <FormProductos
+          handleForm={handleForm}
+          handleSubmit={handleSubmit}
+          data={data}
+        />
       </div>
     </div>
   )

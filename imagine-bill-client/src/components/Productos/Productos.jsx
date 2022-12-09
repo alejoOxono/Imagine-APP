@@ -11,7 +11,7 @@ export default function Productos() {
   const handleSubmit = (e) => {
     e.preventDefault();
     insertRecord(record, 'Productos');
-    if (!record?.nombre || !record?.precio) {
+    if (!record?.nombre || !record?.precio || !record?.iva) {
       alert('Por favor ingrese todos los datos');
     } else {
       alert('Se ha Ingresado un producto nuevo');
@@ -31,8 +31,13 @@ export default function Productos() {
       <InfoBar data={'Ingrese Información de un nuevo producto'} />
       <div className='content-landpage'>
         <h1 className='heading1-bold grises-1000'>Ingresar Nuevo Producto</h1>
-        <FormProductos handleForm={handleForm} handleSubmit={handleSubmit} />
-        <ReadProductos insertRecord={insertRecord} />
+        <FormProductos
+          handleForm={handleForm}
+          handleSubmit={handleSubmit}
+        />
+        <ReadProductos
+          insertRecord={insertRecord}
+        />
       </div>
     </div>
   )

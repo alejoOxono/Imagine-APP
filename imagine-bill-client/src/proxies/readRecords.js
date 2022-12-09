@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const readRecords = (setData, route) => {
+const readRecords = (setData, route, id='') => {
     axios
-        .get(`http://127.0.0.1:8000/api/${route}`)
+        .get(`http://127.0.0.1:8000/api/${route}/${id}`)
         .then((response) => {
             let result = response.data;
             setData(result);

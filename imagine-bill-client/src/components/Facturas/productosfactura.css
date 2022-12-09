@@ -1,0 +1,13 @@
+.content-productos-factura {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-search-add-products {
+    padding: 24px 0;
+    width: 100%;
+}
+
+.content-table-products {
+    width: 100%;
+}

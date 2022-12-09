@@ -17,6 +17,7 @@ class ProductosController extends Controller
         $instance_producto = new Productos;
         $instance_producto->nombre = $request->input('nombre');
         $instance_producto->precio = $request->input('precio');
+        $instance_producto->iva = $request->input('iva');
         $instance_producto->save();
     }
 
@@ -30,6 +31,7 @@ class ProductosController extends Controller
         $search_producto = Productos::find($id);
         $search_producto->nombre = $request->input('nombre');
         $search_producto->precio = $request->input('precio');
+        $search_producto->iva = $request->input('iva');
         $search_producto->save();
     }
 

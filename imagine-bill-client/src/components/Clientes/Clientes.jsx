@@ -31,8 +31,12 @@ export default function Clientes() {
       <InfoBar data={'Ingrese Información de un nuevo cliente'} />
       <div className='content-landpage'>
         <h1 className='heading1-bold grises-1000'>Ingresar Nuevo Cliente</h1>
-        <FormClientes handleForm={handleForm} handleSubmit={handleSubmit} />
-        <ReadClientes insertRecord={insertRecord} />
+        <FormClientes
+          handleForm={handleForm}
+          handleSubmit={handleSubmit}
+        />
+        <ReadClientes insertRecord={insertRecord}
+        />
       </div>
     </div>
   )

@@ -37,7 +37,11 @@ export default function UpdateClientes() {
       <InfoBar data={'Ingrese los nuevos datos para el cliente actual'} />
       <div className='content-landpage'>
         <h1 className='heading1-bold grises-1000'>IActualizar Datos Del Cliente</h1>
-        <FormClientes handleForm={handleForm} handleSubmit={handleSubmit} data={data} />
+        <FormClientes
+          handleForm={handleForm}
+          handleSubmit={handleSubmit}
+          data={data}
+        />
       </div>
     </div>
   )

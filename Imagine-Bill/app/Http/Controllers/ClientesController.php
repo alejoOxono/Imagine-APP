@@ -16,9 +16,6 @@ class ClientesController extends Controller
     {
         $instance_cliente = new Clientes;
         $instance_cliente->documento = $request->input('documento');
-        if(!$instance_cliente->documento){
-            return "valor nulo en documento";
-        }
         $instance_cliente->nombre = $request->input('nombre');
         $instance_cliente->apellido = $request->input('apellido');
         $instance_cliente->save();
@@ -31,13 +28,19 @@ class ClientesController extends Controller
 
     public function update(Request $request, $id)
     {
-        $search_cliente = clientes::find($id);
-        $search_cliente->delete();
-        $instance_cliente = new Clientes;
-        $instance_cliente->documento = $request->input('documento');
-        $instance_cliente->nombre = $request->input('nombre');
-        $instance_cliente->apellido = $request->input('apellido');
-        $instance_cliente->save();
+        $search_cliente = Clientes::find($id);
+        if ($search_cliente->documento == $request->input('documento')) {
+            $search_cliente->nombre = $request->input('nombre');
+            $search_cliente->apellido = $request->input('apellido');
+            $search_cliente->save();
+        } else {
+            $search_cliente->delete();
+            $instance_cliente = new Clientes;
+            $instance_cliente->documento = $request->input('documento');
+            $instance_cliente->nombre = $request->input('nombre');
+            $instance_cliente->apellido = $request->input('apellido');
+            $instance_cliente->save();
+        }
     }
 
     public function destroy($id)

@@ -20,7 +20,9 @@ export default function ReadClientes({ insertRecord }) {
 
   return (
     <div style={{ display: "flex", alignContent: "center", width: "100%" }}>
-      <TableClientes data={data} handleDelete={handleDelete} />
+      <TableClientes
+        data={data}
+        handleDelete={handleDelete} />
     </div>
   )
 }
